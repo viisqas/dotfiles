@@ -1,6 +1,16 @@
 call plug#begin('~/.vim/plugged')
 
-"Fugitive Vim Github Wrapper
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+
 Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+"Plug 'https://github.com/altercation/vim-colors-solarized.git'
+
 
 call plug#end()
+
+" Colorscheme
+"colorscheme solarized
+"set background=dark

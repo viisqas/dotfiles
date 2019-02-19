@@ -5,7 +5,7 @@ set nocompatible
 filetype off
 
 " Turn on syntax highlighting.
-syntax on
+"syntax on
 
 " For plug-ins to load correctly.
 filetype plugin indent on
@@ -75,6 +75,14 @@ set viminfo='100,<9999,s100
 " Map the <Space> key to toggle a selected fold opened/closed.
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
+
+" Show hidden files in NerdTree
+let NERDTreeShowHidden=1
+" Remove one-child dirs collapsing
+let NERDTreeCascadeSingleChildDir=0
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Automatically save and load folds
 autocmd BufWinLeave *.* mkview
