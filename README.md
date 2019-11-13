@@ -1,2 +1,2 @@
 # dotfiles
-zshrc, vimrc - plugins and other
+zshrc, vimrc
